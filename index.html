@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>SQUIGGLE</title>
+   <script src="js/plugins/DrawSVGPlugin.js"></script>
+   <script src="js/plugins/MorphSVGPlugin.min.js"></script>
+   <script src="js/plugins/TimelineMax.js"></script>
+   <script src="js/plugins/TweenMax.js"></script>
+   <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+   <!-- Main Container -->
+   
+   <div class="container center">
+      <!-- Top Squiggles-->
+      <div class="group1">
+         <svg viewBox="0 0 400 145" id="squiggle1">
+            <path id="squiggle1-path" d="M10,10 L10,00 L90,50"></path>
+         </svg>
+         <svg viewBox="0 0 400 145" id="squiggle2">
+            <path id="squiggle2-path" d="M10,10 L10,00 L90,50"></path>
+         </svg>
+         <svg viewBox="0 0 400 145" id="squiggle3">
+            <path id="squiggle3-path" d="M10,10 L10,00 L90,50"></path>
+         </svg>
+         <svg viewBox="0 0 400 145" id="squiggle4">
+            <path id="squiggle4-path" d="M10,10 L10,00 L90,50"></path>
+         </svg>
+         <svg viewBox="0 0 400 145" id="squiggle5">
+            <path id="squiggle5-path" d="M10,10 L10,00 L90,50"></path>
+         </svg>
+      </div>
+
+      <!-- Eyeball -->
+      <!-- <svg id="eyeball" xmlns="http://www.w3.org/2000/svg" width="407.6" height="179">
+         <circle cx="203.7" cy="93" r="61" fill="none" stroke="#2d2d2d" stroke-width="30" stroke-miterlimit="10" />
+         <circle cx="203.7" cy="93" r="16.4" fill="#2d2d2d" />
+         <path id="eye-opened" d="M57.2 84.9S115.7 15 203.7 15s146.5 69.9 146.5 69.9S298.7 164 203.7 164 57.2 84.9 57.2 84.9z" fill="none"
+            stroke="#2d2d2d" stroke-width="30" stroke-miterlimit="10" />
+         <path id="eye-closed"d="M57.2 84.9s58.3-12.8 146.3-12.8 146.7 12.8 146.7 12.8-51.5 16.7-146.5 16.7S57.2 84.9 57.2 84.9z" fill="none"
+            stroke="#2d2d2d" stroke-width="30" stroke-miterlimit="10" />
+      </svg> -->
+
+      <!-- Eyeball 2 Sample-->
+      <svg id="eyeball" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="407.6" height="179">
+         <defs>
+            <path id="clip-path" d="M70.2 84.9s68.3 10.2 146.3 7.2 146.7-7.2 146.7-7.2-51.5-3.3-146.5-3.3-146.5 3.3-146.5 3.3z" />
+            <path id="clip-path2" d="M57.2 84.9S115.7 15 203.7 15s146.5 69.9 146.5 69.9S298.7 164 203.7 164 57.2 84.9 57.2 84.9z" />
+         </defs>
+         <clipPath id="clip">
+            <use xlink:href="#clip-path" overflow="visible" />
+         </clipPath>
+         <g id="retina" clip-path="url(#clip)">
+            <circle id="retina-circle" cx="203.7" cy="93" r="61" fill="none" stroke="#2d2d2d" stroke-width="30" stroke-miterlimit="10" />
+            <circle id="retina-circle" cx="203.7" cy="93" r="16.4" fill="#2d2d2d" />
+         </g>
+         <path id="eye-opened" d="M57.2 84.9S115.7 15 203.7 15s146.5 69.9 146.5 69.9S298.7 164 203.7 164 57.2 84.9 57.2 84.9z" fill="none"
+            stroke="#2d2d2d" stroke-width="30" stroke-miterlimit="10" />
+         <path id="eye-closed" d="M57.2 84.9s58.3-12.8 146.3-12.8 146.7 12.8 146.7 12.8-51.5 16.7-146.5 16.7S57.2 84.9 57.2 84.9z" fill="none"
+            stroke="#2d2d2d" stroke-width="30" stroke-miterlimit="10" />
+         <!-- <path id="eye-closed"d="M61.2 84.9s28.3-6.8 116.3-6.8 116.7 6.8 116.7 6.8-21.5 5.7-116.5 5.7-116.5-5.7-116.5-5.7z" fill="none"
+            stroke="#2d2d2d" stroke-width="30" stroke-miterlimit="10" /> -->
+      </svg>
+      
+      <!-- Bottom Squiggles -->
+      <div class="group2">
+         <svg viewBox="0 0 400 145" id="squiggle6">
+            <path id="squiggle6-path" d="M10,10 L10,00 L90,50"></path>
+         </svg>
+         <svg viewBox="0 0 400 145" id="squiggle7">
+            <path id="squiggle7-path" d="M10,10 L10,00 L90,50"></path>
+         </svg>
+         <svg viewBox="0 0 400 145" id="squiggle8">
+            <path id="squiggle8-path" d="M10,10 L10,00 L90,50"></path>
+         </svg>
+         <svg viewBox="0 0 400 145" id="squiggle9">
+            <path id="squiggle9-path" d="M10,10 L10,00 L90,50"></path>
+         </svg>
+         <svg viewBox="0 0 400 145" id="squiggle10">
+            <path id="squiggle10-path" d="M10,10 L10,00 L90,50"></path>
+         </svg>
+      </div>
+      
+   </div> 
+   <div class="hover"></div>
+
+   <script src="js/main.js"></script>
+</body>
+</html>

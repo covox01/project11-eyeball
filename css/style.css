@@ -1,0 +1,122 @@
+.container {
+   width: 500px;
+   height: 500px;
+   background: #2b2b2b;
+}
+
+.hover {
+   position: absolute;
+   left: 50%;
+   top: 50%;
+   width: 500px;
+   height: 500px;
+}
+
+.center {
+   position: absolute;
+   left: 50%;
+   top: 50%;
+}
+
+#init-state {
+   position: absolute;
+   left: 100%;
+   top: 50%;
+}
+
+.animation-states {
+   visibility: hidden;
+   border: 1px solid green;
+}
+
+#squiggle1, #squiggle2 {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 80px;
+   height: 26px;
+}
+
+#squiggle3, #squiggle4, #squiggle5 {
+   position: absolute;
+   top: 0;
+   right: 0;
+   /* width: 139px;
+   height: 96px; */
+   width: 80px;
+   height: 26px;
+   /* border: 1px solid red; */
+}
+
+.group1 {
+   position: absolute;
+   top: 0px;
+   left: 0px;
+   width: 500px;
+   height: 250px;
+}
+
+
+#squiggle6, #squiggle7 {
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   width: 80px;
+   height: 26px;
+   /* border: 1px solid red; */
+}
+
+#squiggle8, #squiggle9, #squiggle10 {
+   position: absolute;
+   bottom: 0;
+   right: 0;
+   width: 80px;
+   height: 26px;
+   /* border: 1px solid red; */
+}
+
+.group2 {
+   position: absolute;
+   bottom: 0px;
+   left: 0px;
+   width: 500px;
+   height: 250px;
+   /* transform: rotate(180deg); */
+   /* border: 1px solid red; */
+}
+
+#eyeball {
+   position: absolute;
+   left: 50%;
+   top: 50%;
+   /* border: 1px solid red; */
+}
+
+#eye-closed {
+   visibility: hidden;
+}
+
+path {
+   stroke: white;
+   stroke-width: 40px;
+   stroke-linecap: round;
+   fill: none;
+}
+
+#eyeball path {
+   stroke-width: 20px;
+}
+
+circle {
+   stroke: white;
+   stroke-width: 20px;
+   stroke-linecap: round;
+   fill: none;
+}
+
+#clip-path2 {
+   visibility: hidden;
+}
+
+
+
