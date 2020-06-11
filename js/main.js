@@ -47,20 +47,21 @@ function hoverState(){
    TweenMax.to("#retina", .75, {opacity: 1, ease: Power3.easeInOut})
    TweenMax.to("#eye-opened", .75, {morphSVG: "#eye-opened", ease: Power3.easeInOut})
    TweenMax.to("#clip-path", .75, {morphSVG: "#clip-path2", ease: Power3.easeInOut})
+   TweenMax.to("#retina-circle2", .75, {scale: .6, transformOrigin: "center center", ease: Power3.easeInOut})
 
-   var tl = new TimelineMax()
-   tl.to("#retina-circle", .5, {x: 20})
-   .to("#retina-circle", .5, {x: -20})
-   .to("#retina-circle", .25, {x: 0})
-   // phase1()
-
-   // TweenMax.to("#retina-circle", .1, {x: 3, repeat: -1, yoyo: true})
+   var tl = new TimelineMax({repeat: -1})
+   tl.to(".retina-circle", .05, {x: -2})
+   .to(".retina-circle", .05, {x: 2})
 }
 
 function hoverOut(){
    TweenMax.to("#retina", .75, { opacity: 0, ease: Power3.easeInOut })
    TweenMax.to("#eye-opened", .75, { morphSVG: "#eye-closed", ease: Power3.easeInOut })
    TweenMax.to("#clip-path", .75, { morphSVG: "#clip-path", ease: Power3.easeInOut })
+   TweenMax.to("#retina-circle2", .75, {scale: 1})
+
+   var tl = new TimelineMax()
+   tl.to(".retina-circle", .5, {x: 0})
 }
 function addEventListener() {
    bg.addEventListener("mouseover", hoverState)
