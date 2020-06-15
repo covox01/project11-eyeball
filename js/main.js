@@ -34,7 +34,7 @@ function phase1(){
       document.querySelector("#squiggle9-path").setAttribute("d", path)
       document.querySelector("#squiggle10-path").setAttribute("d", path)
 
-      t += 2.5
+      t += 10.5
 
       // What is requestAnimationFrame???
       requestAnimationFrame(animate)
@@ -44,10 +44,11 @@ function phase1(){
 }
 
 function hoverState(){
-   TweenMax.to("#retina", .75, {opacity: 1, ease: Power3.easeInOut})
-   TweenMax.to("#eye-opened", .75, {morphSVG: "#eye-opened", ease: Power3.easeInOut})
-   TweenMax.to("#clip-path", .75, {morphSVG: "#clip-path2", ease: Power3.easeInOut})
-   TweenMax.to("#retina-circle2", .75, {scale: .6, transformOrigin: "center center", ease: Power3.easeInOut})
+   TweenMax.to("#retina", .4, {opacity: 1, ease: Power3.easeInOut})
+   TweenMax.to("#eye-opened", .4, {morphSVG: "#eye-opened", ease: Power3.easeInOut})
+   TweenMax.to("#clip-path", .4, {morphSVG: "#clip-path2", ease: Power3.easeInOut})
+   TweenMax.to("#retina-circle2", .4, {scale: .6, transformOrigin: "center center", ease: Power3.easeInOut})
+   TweenMax.to(".group1, .group2", .1, {opacity: 1, delay: .2})
 
    var tl = new TimelineMax({repeat: -1})
    tl.to(".retina-circle", .05, {x: -2})
@@ -55,10 +56,11 @@ function hoverState(){
 }
 
 function hoverOut(){
-   TweenMax.to("#retina", .75, { opacity: 0, ease: Power3.easeInOut })
-   TweenMax.to("#eye-opened", .75, { morphSVG: "#eye-closed", ease: Power3.easeInOut })
-   TweenMax.to("#clip-path", .75, { morphSVG: "#clip-path", ease: Power3.easeInOut })
-   TweenMax.to("#retina-circle2", .75, {scale: 1})
+   TweenMax.to("#retina", .4, { opacity: 0, ease: Power3.easeInOut })
+   TweenMax.to("#eye-opened", .4, { morphSVG: "#eye-closed", ease: Power3.easeInOut })
+   TweenMax.to("#clip-path", .4, { morphSVG: "#clip-path", ease: Power3.easeInOut })
+   TweenMax.to("#retina-circle2", .4, {scale: 1})
+   TweenMax.to(".group1, .group2", .1, { opacity: 0, delay: .2 })
 
    var tl = new TimelineMax()
    tl.to(".retina-circle", .5, {x: 0})
@@ -75,7 +77,6 @@ function init(){
    TweenMax.set("#squiggle3", { x: -200, y: 50, rotation: -90 })
    TweenMax.set("#squiggle4", { x: -100, y: 70, rotation: 120 })
    TweenMax.set("#squiggle5", { x: -30, y: 110, rotation: 140 })
-
    TweenMax.set("#squiggle6", { x: 30, y: -110, rotation: 140 })
    TweenMax.set("#squiggle7", { x: 100, y: -70, rotation: 120 })
    TweenMax.set("#squiggle8", { x: -200, y: -50, rotation: 90 })
@@ -84,6 +85,7 @@ function init(){
    TweenMax.set("path", {x: 0})
    TweenMax.set("#eye-opened", {morphSVG: "#eye-closed"})
    TweenMax.set("#retina", {opacity: 0})
+   TweenMax.set(".group1, .group2", {opacity: 0})
    addEventListener()
    phase1()
 }
