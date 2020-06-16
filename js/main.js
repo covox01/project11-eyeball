@@ -1,5 +1,3 @@
-
-// var eyeLid = document.getElementById("eye")
 var bg = document.querySelector(".hover")
 function phase1(){
    let xs = []
@@ -27,7 +25,6 @@ function phase1(){
       document.querySelector("#squiggle3-path").setAttribute("d", path)
       document.querySelector("#squiggle4-path").setAttribute("d", path)
       document.querySelector("#squiggle5-path").setAttribute("d", path)
-
       document.querySelector("#squiggle6-path").setAttribute("d", path)
       document.querySelector("#squiggle7-path").setAttribute("d", path)
       document.querySelector("#squiggle8-path").setAttribute("d", path)
